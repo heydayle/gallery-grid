@@ -1,0 +1,50 @@
+
+
+.header {
+  background: rgb(58, 214, 149);
+  position: sticky;
+  top: 0px;
+
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+
+    @media screen and (max-width: $md) {
+      padding: 0;
+    }
+  }
+
+  .logo {
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  ul {
+    padding: 0;
+    display: inline-flex;
+    list-style: none;
+
+    li:nth-child(n+1) {
+      margin-right: 1rem;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+
+    li {
+      padding: 0.25rem 1rem;
+      border: 1px solid white;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background: rgb(51, 184, 128);
+    }
+  }
+}
