@@ -5,7 +5,10 @@ import { ref } from 'vue';
 <template>
   <nav class="header">
     <div class="container">
-      <div class="logo">Thinh Le</div>
+      <a class="logo" href="/">
+        <img src="../assets/icons/logo.svg" alt="logo" width="40" height="40" class="logo-img">
+        <div class="logo-content">Thinh Le</div>
+      </a>
       <div>
         <ul>
           <li>Indie Game</li>
