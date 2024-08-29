@@ -1,20 +1,33 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useSettingStore } from "../stores/useModeStore";
+const MODES = [
+  {
+    label: 'Focus',
+    value: 0,
+  },
+  {
+    label: 'Normal',
+    value: 1,
+  },
+]
+const settingStore = useSettingStore()
 </script>
 
 <template>
   <nav class="header">
     <div class="container">
       <a class="logo" href="/">
-        <img src="../assets/icons/logo.svg" alt="logo" width="40" height="40" class="logo-img">
-        <div class="logo-content">Thinh Le</div>
+        <div class="logo-content">THINK</div>
       </a>
       <div>
-        <ul>
-          <li>Indie Game</li>
-          <li>Entry Game</li>
-          <li>Community</li>
-        </ul>
+        <button
+            v-for="item in MODES"
+            @click="settingStore.updateMode(item.value)"
+            class="button-mode"
+            :class="settingStore.mode === item.value ? 'button-mode-active' : ''"
+        >
+          {{ item.label }}
+        </button>
       </div>
     </div>
   </nav>

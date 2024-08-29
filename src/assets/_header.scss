@@ -1,9 +1,11 @@
 
 
 .header {
-  background: rgb(58, 214, 149);
+  background: #343a40;
   position: sticky;
   top: 0px;
+  padding: 16px 0;
+  z-index: 10;
 
 
   .container {
@@ -31,7 +33,19 @@
     &-content {
       color: white;
       font-size: 1.25rem;
+      font-family: fantasy;
     }
+  }
+  .button-mode {
+    background: #212529;
+    color: #3f474e;
+    margin-right: 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .button-mode-active {
+    border: 1px solid #f8f9fa;
+    color: #f8f9fa;
   }
 
   ul {
