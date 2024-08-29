@@ -17,7 +17,10 @@ const settingStore = useSettingStore()
   <nav class="header">
     <div class="container">
       <a class="logo" href="/">
-        <div class="logo-content">THINK</div>
+          <div class="logo-content">
+            <div>THINK</div>
+            <div style="width: 4px; height: 4px; background: #f8f9fa"/>
+          </div>
       </a>
       <div>
         <button

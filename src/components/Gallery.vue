@@ -14,8 +14,8 @@ const { mode } = storeToRefs(useSettingStore())
 <template>
   <div class="container">
     <div class="gallery">
-      <div v-for="item in 29" :key="item" class="gallery-item">
-        <img :class="{ 'not-focus' : itemHover !== item && itemHover && mode === MODES.FOCUS }" :src="`/images/img (${item+1}).JPG`" alt="img" @mouseenter="itemHover = item" @mouseleave="itemHover = ''">
+      <div v-for="item in 147" :key="item" class="gallery-item">
+        <img loading="lazy" :class="{ 'not-focus' : itemHover !== item && itemHover && mode === MODES.FOCUS }" :src="`/images/img (${item+1}).JPG`" alt="img" @mouseenter="itemHover = item" @mouseleave="itemHover = ''">
       </div>
     </div>
   </div>
